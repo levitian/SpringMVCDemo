@@ -1,3 +1,3 @@
 # SpringMVCDemo
-springmvc+hibernate+spring
+springmvc+hibernate+spring+maven
 
