@@ -31,8 +31,7 @@ public class UserService {
 	}
 	
 	public void deleteUser(int userId) {
-		User userToDelete = userDAO.get(userId);
-		userDAO.delete(userToDelete);
+		userDAO.delete(userId);
 	}
 	
 	public void updateUser(User user) {

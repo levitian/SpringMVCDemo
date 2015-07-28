@@ -19,13 +19,12 @@ public class EventService {
 		this.eventDao = eventDao;
 	}
 	
-	public void add(Event event){
-		eventDao.save(event);
+	public int add(Event event){
+		return (Integer)eventDao.save(event);
 	}
 	
 	public void delete(int id){
-		Event event = eventDao.get(id);
-		eventDao.delete(event);
+		eventDao.delete(id);
 	}
 	
 	public void update(Event event){

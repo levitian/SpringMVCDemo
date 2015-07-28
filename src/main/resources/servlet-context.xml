@@ -47,7 +47,7 @@
 				<!-- change to update after first run -->
 				<beans:prop key="hibernate.hbm2ddl.auto">update</beans:prop>
 				<!-- sql fixture file that runs if above option is create -->
-				<!-- <beans:prop key="hibernate.hbm2ddl.import_files">import.sql</beans:prop> -->
+				<!-- <beans:prop key="hibernate.hbm2ddl.import_files">springmvcdemo.sql</beans:prop> -->
 			</beans:props>
 		</beans:property>
 		<beans:property name="packagesToScan" value="com.ehualu.bo" />
