@@ -20,7 +20,7 @@ public class EventService {
 	}
 	
 	public int add(Event event){
-		return (Integer)eventDao.save(event);
+		return eventDao.save(event);
 	}
 	
 	public void delete(int id){
