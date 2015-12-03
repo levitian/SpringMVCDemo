@@ -1,6 +1,7 @@
 package com.ehualu.bo;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -22,6 +23,9 @@ public class DailyRecord implements Serializable {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "ID")
 	private long id;
+	
+	@Column(name = "WORK_DATE")
+	private Date work_date;
 	
 	/**
 	 * 姓名
@@ -71,12 +75,23 @@ public class DailyRecord implements Serializable {
 	@Column(name = "REMARK")
 	private String remark;
 
+	@Column(name = "CREATE_DATE")
+	private Date create_date;
+
 	public long getId() {
 		return id;
 	}
 
 	public void setId(long id) {
 		this.id = id;
+	}
+
+	public Date getWork_date() {
+		return work_date;
+	}
+
+	public void setWork_date(Date work_date) {
+		this.work_date = work_date;
 	}
 
 	public String getName() {
@@ -141,6 +156,14 @@ public class DailyRecord implements Serializable {
 
 	public void setRemark(String remark) {
 		this.remark = remark;
+	}
+
+	public Date getCreate_date() {
+		return create_date;
+	}
+
+	public void setCreate_date(Date create_date) {
+		this.create_date = create_date;
 	}
 	
 	
