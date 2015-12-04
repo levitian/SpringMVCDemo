@@ -4,6 +4,8 @@ import java.net.InetAddress;
 import java.net.NetworkInterface;
 import java.net.SocketException;
 import java.net.UnknownHostException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import org.junit.Test;
 
@@ -37,5 +39,10 @@ public class TestLocalMac {
 		InetAddress ia = InetAddress.getLocalHost();
 		System.out.println(ia);
 		getLocalMac(ia);
+	}
+	
+	@Test
+	public void testAAA(){
+		System.out.println(new SimpleDateFormat("yyyy-MM-dd").format(new Date(1449072000000L)));
 	}
 }

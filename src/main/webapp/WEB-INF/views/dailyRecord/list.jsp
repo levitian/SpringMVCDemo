@@ -27,7 +27,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body style="margin:10px">
 	<input id="writeDailyReport" class="btn btn-primary" type="button" value="填写日报" />
-	<input id="exportDailyReport" class="btn btn-primary" type="button" value="导出日报" />
+	<a href="<%=request.getContextPath()%>/dr/exportTodayDailyRecord" class="btn btn-primary" >导出日报</a>
   	<div id="dialog-confirm" title="填报工作日报" style="display:none">
  		<p>
  			<form id="add_form" class="form-horizontal" role="form">
@@ -136,6 +136,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				 });				
 			});
 			
+
 			function add_daily_report(){
 				 $.ajax({
 				        url: '<%=request.getContextPath()%>/dr/add',

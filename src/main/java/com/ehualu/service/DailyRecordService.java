@@ -2,6 +2,7 @@ package com.ehualu.service;
 
 import java.util.List;
 
+import org.hibernate.Criteria;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -33,5 +34,13 @@ public class DailyRecordService {
 	
 	public void update(DailyRecord dailyRecord){
 		dailyRecordDao.update(dailyRecord);
+	}
+	
+	public List<DailyRecord> list(String propertyName, Object value){
+		return dailyRecordDao.list(propertyName, value);
+	}
+	
+	public List<DailyRecord> listByToday(){
+		return dailyRecordDao.listByToday();
 	}
 }
